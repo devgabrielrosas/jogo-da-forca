@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JTextArea;
 
 public class TelaJogo {
 
@@ -24,6 +25,7 @@ public class TelaJogo {
 	private JLabel labelPenalidade;
 	private JLabel labelResultado;
 	private JLabel labelImagem;
+	private JTextArea textArea;
 
 	/**
 	 * Launch the application.
@@ -56,7 +58,7 @@ public class TelaJogo {
 		
 		frame = new JFrame();
 		frame.setTitle("TelaJogo");
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 521, 346);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -69,6 +71,7 @@ public class TelaJogo {
 		frame.getContentPane().add(labelLetra);
 		
 		letraInput = new JTextField();
+		letraInput.setEnabled(false);
 		letraInput.setBounds(67, 81, 52, 21);
 		frame.getContentPane().add(letraInput);
 		letraInput.setColumns(10);
@@ -87,15 +90,22 @@ public class TelaJogo {
 					
 					
 					labelPenalidade.setText("Penalidade: " + novoJogo.getNomePenalidade());
-					labelResultado.setText(novoJogo.getResultado());
+					labelResultado.setText(novoJogo.getAcertou());
 					
 					ImageIcon icon =
-							new ImageIcon(this.getClass().getResource("imagens/"+novoJogo.getCodigoPenalidade()+".png"));
+							new ImageIcon(this.getClass().getResource("./imagens/"+novoJogo.getCodigoPenalidade()+".png"));
 					labelImagem.setIcon(icon);
 					if (novoJogo.terminou()) buttonAdvinhar.setEnabled(false);
 					else buttonAdvinhar.setEnabled(true);
 					
+					if (!novoJogo.getResultado().equals("em andamento")) {
+						labelResultado.setText(novoJogo.getResultado());
+					}
+					letraInput.setText("");
+					letraInput.requestFocus(true);
+					
 				} catch (Exception e1) {
+					letraInput.requestFocus(true);
 					labelResultado.setText(e1.getMessage());
 				}
 			}
@@ -109,31 +119,37 @@ public class TelaJogo {
 		buttonIniciar = new JButton("Iniciar");
 		buttonIniciar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				try {
+					novoJogo.iniciar();
+					textArea.setText(novoJogo.getResultados());
+					labelPalavra.setText("Palavra= "+ novoJogo.getPalavra());
+					labelAcertos.setText("Acertos: "  + novoJogo.getAcertos());
+					labelPenalidade.setText("Penalidade: " + novoJogo.getNomePenalidade());
+					labelResultado.setText(novoJogo.getResultado());
+					labelDica.setText("Dica: " + novoJogo.getDicas());
+					ImageIcon icon =
+							new ImageIcon(this.getClass().getResource("./imagens/"+novoJogo.getCodigoPenalidade()+".png"));
+					labelImagem.setIcon(icon);
+						
+					buttonAdvinhar.setEnabled(true);
+					
+					letraInput.setEnabled(true);
+					
+					labelAcertos.setVisible(true);
+					labelAcertos.setForeground(Color.GREEN);
+					labelPenalidade.setVisible(true);
+					labelPenalidade.setForeground(Color.RED);
+					labelResultado.setVisible(true);
+					
+				}
+				catch (Exception e1) {
+					labelResultado.setText(e1.getMessage());
+				}
 				
-				novoJogo.iniciar();
-				
-				
-				labelPalavra.setText("Palavra= "+ novoJogo.getPalavra());
-				labelAcertos.setText("Acertos: "  + novoJogo.getAcertos());
-				labelPenalidade.setText("Penalidade: " + novoJogo.getNomePenalidade());
-				labelResultado.setText(novoJogo.getResultado());
-				labelDica.setText("Dica: " + novoJogo.getDicas());
-				ImageIcon icon =
-						new ImageIcon(this.getClass().getResource("imagens/"+novoJogo.getCodigoPenalidade()+".png"));
-				labelImagem.setIcon(icon);
-				
-				buttonAdvinhar.setEnabled(true);
-				
-				
-				labelAcertos.setVisible(true);
-				labelAcertos.setForeground(Color.GREEN);
-				labelPenalidade.setVisible(true);
-				labelPenalidade.setForeground(Color.RED);
-				labelResultado.setVisible(true);
 					
 			}
 		});
-		buttonIniciar.setBounds(43, 12, 105, 27);
+		buttonIniciar.setBounds(41, 16, 105, 27);
 		frame.getContentPane().add(buttonIniciar);
 		
 		labelPalavra = new JLabel("Palavra= ");
@@ -141,26 +157,30 @@ public class TelaJogo {
 		frame.getContentPane().add(labelPalavra);
 		
 		labelAcertos = new JLabel("Acertos: "  + novoJogo.getAcertos());
-		labelAcertos.setBounds(166, 12, 60, 17);
+		labelAcertos.setBounds(210, 21, 60, 17);
 		frame.getContentPane().add(labelAcertos);
 		labelAcertos.setVisible(false);
 		
 		labelPenalidade = new JLabel("Penalidade: " + novoJogo.getNomePenalidade());
-		labelPenalidade.setBounds(238, 12, 266, 17);
+		labelPenalidade.setBounds(297, 21, 266, 17);
 		frame.getContentPane().add(labelPenalidade);
 		labelPenalidade.setVisible(false);
 		
 		
 		labelResultado = new JLabel(novoJogo.getResultado());
-		labelResultado.setBounds(23, 197, 196, 17);
+		labelResultado.setBounds(23, 140, 247, 17);
 		frame.getContentPane().add(labelResultado);
 		labelResultado.setVisible(false);
 		
 		labelImagem = new JLabel("");
-		java.net.URL imgURL6 = getClass().getResource("imagens/6.png");
+		java.net.URL imgURL6 = getClass().getResource("./imagens/6.png");
 		labelImagem.setIcon(new ImageIcon(imgURL6));
-		labelImagem.setBounds(288, 106, 150, 150);
+		labelImagem.setBounds(334, 111, 150, 150);
 		frame.getContentPane().add(labelImagem);
+		
+		textArea = new JTextArea();
+		textArea.setBounds(23, 168, 275, 116);
+		frame.getContentPane().add(textArea);
 		
 		
 		
