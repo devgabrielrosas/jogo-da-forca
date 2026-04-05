@@ -2,12 +2,15 @@ package src;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
+
+import javax.swing.JOptionPane;
 
 public class JogoDaForca {
 	private ArrayList<String> bancoPalavras= new ArrayList<>();
@@ -22,18 +25,19 @@ public class JogoDaForca {
 	}
 
     public JogoDaForca(){
-        try{
+        	InputStream stream = this.getClass().getResourceAsStream("dados/palavras.csv");
+        	if (stream == null) {
+        		JOptionPane.showMessageDialog(null, "Arquivo de palavras inexistente!");
+        			System.exit(0);
+        		}
             String linha;
-            Scanner arquivo = new Scanner(new File("palavras.csv"));
+            Scanner arquivo = new Scanner(stream);
             while (arquivo.hasNextLine()) {
                 linha = arquivo.nextLine();
                 this.bancoPalavras.add(linha);
             }
             arquivo.close();
-        } catch (FileNotFoundException e){
-            System.out.println("Cadê o arquivo?");
-        }
-    }
+            }
     
     public void iniciar() {
 		resultado = "em andamento";
@@ -55,7 +59,8 @@ public class JogoDaForca {
     }
     
     public ArrayList<Integer> getOcorrencias(String letra) throws Exception{
-		if (letra.length() > 1 || letra.length() < 1) throw new Exception("");
+		if (letra.length() > 1 || letra.length() < 1) 
+			throw new Exception("Digite apenas uma letra válida!");
 
 		letra = letra.toUpperCase();
 
@@ -117,7 +122,7 @@ public class JogoDaForca {
 	}
 
 	public boolean terminou(){
-		return !resultado.equals("em andamento");
+		return !(resultado.equals("em andamento"));
 	}
     public static void main(String[] args) throws Exception {
 		JogoDaForca x = new JogoDaForca();
