@@ -69,6 +69,11 @@ public class JogoDaForca {
 		if (letrasDigitadas.contains(letra)) {
 			throw new Exception("Você já digitou essa letra");
 		}
+		char letraChar = letra.charAt(0);
+		
+		if (letraChar < 'A' || letraChar > 'Z' ) {
+			throw new Exception("Digite uma letra válida");
+		}
 		
 		letrasDigitadas.add(letra);
 

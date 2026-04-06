@@ -100,6 +100,7 @@ public class TelaJogo {
 					
 					if (!novoJogo.getResultado().equals("em andamento")) {
 						labelResultado.setText(novoJogo.getResultado());
+						textArea.setText(novoJogo.getResultados());
 					}
 					letraInput.setText("");
 					letraInput.requestFocus(true);
@@ -112,6 +113,7 @@ public class TelaJogo {
 		});
 		
 		
+		frame.getRootPane().setDefaultButton(buttonAdvinhar);
 		buttonAdvinhar.setEnabled(false);
 		buttonAdvinhar.setBounds(141, 78, 105, 27);
 		frame.getContentPane().add(buttonAdvinhar);
@@ -121,7 +123,6 @@ public class TelaJogo {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					novoJogo.iniciar();
-					textArea.setText(novoJogo.getResultados());
 					labelPalavra.setText("Palavra= "+ novoJogo.getPalavra());
 					labelAcertos.setText("Acertos: "  + novoJogo.getAcertos());
 					labelPenalidade.setText("Penalidade: " + novoJogo.getNomePenalidade());
