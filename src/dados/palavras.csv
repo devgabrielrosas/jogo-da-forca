@@ -1,20 +1,201 @@
-AMETISTA,Pedra preciosa de cor violeta
-BIBLIOTECA,Lugar onde se guardam muitos livros
-CAVALO,Animal que galopa e é usado em montaria
-DIAMANTE,O material natural mais duro que existe
-ESCORPIÃO,Aracnídeo que possui um ferrão na cauda
-FLAMENGO,Nome de um pássaro rosa ou de um time carioca
-GIRAFA,Animal de pescoço muito comprido
-HELICÓPTERO,Aeronave que decola verticalmente
-IOGURTE,Produto derivado do leite muito comum no café da manhã
-JANGADA,Embarcação rústica de madeira comum no Nordeste
-KARAOKE,Atividade de cantar acompanhando uma letra na tela
-LABIRINTO,Local cheio de caminhos confusos e difíceis
-MORCEGO,Único mamífero que voa de verdade
-NEBULOSA,Grande nuvem de gás e poeira no espaço
-ORQUESTRA,Conjunto de músicos que tocam diversos instrumentos
-PANTUFA,Calçado confortável para usar dentro de casa
-QUARTZO,Mineral muito comum na crosta terrestre
-REFRIGERANTE,Bebida gasosa geralmente doce
-SINFONIA,Composição musical complexa para orquestra
-TELESCOPIO,Instrumento usado para observar estrelas e planetas
+ABACATE,Fruta verde muito usada em vitaminas
+ABACAXI,Fruta tropical com casca espinhosa
+ABELHA,Inseto que produz mel
+ABISMO,Grande profundidade ou buraco muito fundo
+ACEROLA,Fruta pequena rica em vitamina C
+ACORDEAO,Instrumento musical muito usado no forro
+ACUCAR,Ingrediente doce usado em receitas
+ADAGA,Arma branca curta e pontiaguda
+AEROPORTO,Lugar onde pousam e decolam avioes
+AGULHA,Objeto fino usado para costurar
+ALFACE,Vegetal muito usado em saladas
+ALICATE,Ferramenta usada para apertar ou cortar
+ALMOFADA,Objeto macio usado para apoiar a cabeca
+ALPINISTA,Pessoa que escala montanhas
+AMENDOIM,Semente muito consumida torrada
+AMPULHETA,Objeto que mede o tempo com areia
+ANCORA,Objeto usado para fixar barcos
+ANEL,Objeto circular usado no dedo
+ANIVERSARIO,Data em que se comemora o nascimento
+ANTENA,Objeto que capta sinais
+APITO,Objeto que emite som agudo
+AQUARELA,Tecnica de pintura com tinta diluida em agua
+ARANHA,Aracnideo que produz teias
+AREIA,Material encontrado em praias e desertos
+ARMARIO,Movel usado para guardar roupas
+ARQUEIRO,Pessoa que usa arco e flecha
+ARVORE,Planta de grande porte com tronco
+ASA,Parte do corpo usada para voar
+ASSENTO,Lugar onde se senta
+ASTRONAUTA,Pessoa que viaja ao espaco
+ATLETA,Pessoa que pratica esportes
+AVENTAL,Roupa usada para proteger durante tarefas
+AVIAO,Meio de transporte aereo
+BACIA,Recipiente usado para lavar objetos
+BALA,Doce pequeno geralmente embrulhado
+BALAO,Objeto inflavel que flutua
+BANANA,Fruta amarela muito popular
+BANCO,Local para guardar dinheiro ou sentar
+BANDEIRA,Simbolo de um pais ou grupo
+BARCO,Meio de transporte na agua
+BARRACA,Abrigo usado em acampamentos
+BATERIA,Instrumento musical de percussao
+BEBIDA,Liquido para consumo
+BICICLETA,Meio de transporte com duas rodas
+BISCOITO,Alimento crocante doce ou salgado
+BOLA,Objeto usado em varios esportes
+BONECO,Brinquedo em forma de pessoa
+BORBOLETA,Inseto com asas coloridas
+BORRACHA,Objeto usado para apagar
+BOTAO,Pequena peca usada em roupas
+BRINQUEDO,Objeto usado para diversao
+BUZINA,Dispositivo que emite som alto
+CACHORRO,Animal domestico muito comum
+CADEADO,Dispositivo usado para trancar
+CADEIRA,Movel usado para sentar
+CAFETEIRA,Objeto usado para fazer cafe
+CAIXA,Recipiente para guardar coisas
+CALENDARIO,Tabela que organiza os dias do ano
+CAMINHAO,Veiculo grande para transporte de carga
+CANETA,Objeto usado para escrever
+CANGURU,Animal que salta e tem bolsa
+CAPACETE,Equipamento de protecao para a cabeca
+CARRO,Meio de transporte terrestre
+CARTAO,Objeto usado para pagamento ou identificacao
+CASACO,Roupa usada para frio
+CASTELO,Construcao antiga fortificada
+CAVALO,Animal usado para montaria
+CELULAR,Aparelho de comunicacao portatil
+CENOURA,Legume de cor laranja
+CHAVE,Objeto usado para abrir portas
+CHOCOLATE,Doce feito a partir do cacau
+CHUVA,Precipitacao de agua das nuvens
+CINEMA,Lugar onde se assistem filmes
+CIRCO,Local de apresentacoes artisticas
+COELHO,Animal que pula e gosta de cenoura
+COLHER,Utensilio usado para comer
+COMPUTADOR,Maquina usada para processar dados
+CORACAO,Orgao que bombeia sangue
+CORDA,Objeto usado para amarrar ou puxar
+CORUJA,Ave de habitos noturnos
+COZINHA,Local onde se prepara comida
+CRIANCA,Pessoa em fase de crescimento
+DADO,Objeto usado em jogos
+DENTE,Parte da boca usada para mastigar
+DESERTO,Regiao com pouca chuva
+DESENHO,Representacao grafica
+DIARIO,Registro de acontecimentos do dia a dia
+DINHEIRO,Meio usado para comprar coisas
+DINOSSAURO,Animal pre historico extinto
+DISCO,Objeto redondo usado para armazenar dados
+DOCE,Alimento com sabor acucarado
+DRAGAO,Criatura mitologica que cospe fogo
+ELEFANTE,Animal grande com tromba
+ELEVADOR,Equipamento que sobe e desce em predios
+ESCADA,Objeto usado para subir e descer
+ESCOLA,Local de aprendizado
+ESPADA,Arma branca longa
+ESPELHO,Superficie que reflete imagens
+ESPONJA,Objeto usado para limpeza
+ESTRELA,Corpo celeste que brilha
+ESTUDANTE,Pessoa que estuda
+EXERCICIO,Atividade fisica ou mental
+FACA,Utensilio usado para cortar
+FANTASIA,Roupa usada em festas tematicas
+FAROL,Sinal luminoso para orientacao
+FEIJAO,Alimento muito consumido no Brasil
+FERRAMENTA,Objeto usado para trabalho manual
+FESTA,Evento comemorativo
+FILME,Obra audiovisual
+FLORESTA,Area com muitas arvores
+FLOR,Parte colorida das plantas
+FOGO,Combustao que gera calor e luz
+FOGUEIRA,Fogo ao ar livre
+FORMIGA,Inseto pequeno e trabalhador
+FOGAREIRO,Equipamento para cozinhar
+FRUTA,Alimento de origem vegetal
+FUTEBOL,Esporte popular no Brasil
+GARRAFA,Recipiente para liquidos
+GATO,Animal domestico independente
+GELO,Agua em estado solido
+GELADEIRA,Eletrodomestico que conserva alimentos
+GIRAFA,Animal de pescoco longo
+GLOBO,Representacao da Terra
+GOIABA,Fruta tropical
+GOLFINHO,Mamifero marinho inteligente
+GUITARRA,Instrumento musical eletrico
+HAMBURGUER,Lanche feito com carne e pao
+HOSPITAL,Local de atendimento medico
+HOTEL,Local para hospedagem
+IGREJA,Local de reuniao religiosa
+ILHA,Porcao de terra cercada por agua
+IMAGEM,Representacao visual
+IMPRESSORA,Maquina que imprime documentos
+JANELA,Abertura em paredes para ventilacao
+JARDIM,Area com plantas e flores
+JOGO,Atividade de entretenimento
+JORNAL,Meio de informacao
+JUIZ,Autoridade que julga
+LAGARTO,Reptil de pequeno porte
+LAMPADA,Objeto que emite luz
+LAPIS,Objeto usado para escrever
+LARANJA,Fruta citrica
+LEAO,Animal conhecido como rei da selva
+LEITE,Bebida nutritiva
+LIVRO,Conjunto de paginas com texto
+LUA,Satelite natural da Terra
+MACACO,Animal primata
+MADEIRA,Material vindo de arvores
+MALA,Objeto usado para viagens
+MAPA,Representacao geografica
+MAR,Grande massa de agua salgada
+MARTelo,Ferramenta usada para bater pregos
+MEDICO,Profissional da saude
+MEL,Alimento produzido por abelhas
+MESA,Movel usado para apoio
+MICROFONE,Dispositivo que capta som
+MONTANHA,Elevacao natural do terreno
+MOTO,Veiculo de duas rodas
+NAVIO,Grande embarcacao
+NEVE,Agua congelada que cai do ceu
+NOITE,Periodo sem luz solar
+NUVEM,Acumulo de vapor no ceu
+OCULOS,Acessorio para visao
+OCEANO,Grande massa de agua
+OVO,Alimento produzido por aves
+PADEIRO,Profissional que faz paes
+PAO,Alimento feito de farinha
+PAPEL,Material usado para escrever
+PARQUE,Area de lazer ao ar livre
+PASSARO,Ave em geral
+PEIXE,Animal que vive na agua
+PENTE,Objeto para arrumar cabelo
+PIPOCA,Alimento feito de milho
+PISCINA,Local para nadar
+PLANETA,Corpo celeste que orbita estrela
+PRATO,Utensilio para servir comida
+QUADRO,Objeto decorativo
+QUEIJO,Alimento derivado do leite
+QUINTAL,Area externa de uma casa
+RATO,Pequeno roedor
+RELAMPAGO,Descarga eletrica no ceu
+RELOGIO,Objeto que marca o tempo
+RIO,Curso de agua natural
+RODA,Objeto circular usado em veiculos
+ROUPA,Vestimenta
+SAPATO,Calcado para os pes
+SAPO,Anfibio que vive em lugares umidos
+SOL,Estrela do sistema solar
+SORVETE,Sobremesa gelada
+SUCO,Bebida feita de frutas
+TAPETE,Objeto usado no chao
+TECLADO,Dispositivo de entrada de dados
+TELEFONE,Meio de comunicacao
+TELEVISAO,Aparelho para assistir programas
+TENIS,Esporte ou calcado
+TESOURA,Objeto usado para cortar
+TIJOLO,Material de construcao
+TOMATE,Fruto usado em saladas
+TORRE,Construcao alta
+TREM,Meio de transporte sobre trilhos
+URSO,Animal de grande porte
