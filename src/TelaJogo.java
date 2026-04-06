@@ -179,6 +179,7 @@ public class TelaJogo {
 		frame.getContentPane().add(labelImagem);
 		
 		textArea = new JTextArea();
+		textArea.setEditable(false);
 		textArea.setBounds(23, 168, 275, 116);
 		frame.getContentPane().add(textArea);
 		
