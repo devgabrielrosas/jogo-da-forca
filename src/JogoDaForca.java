@@ -1,7 +1,5 @@
 package src;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,14 +7,14 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
-
 import javax.swing.JOptionPane;
 
 public class JogoDaForca {
 	private ArrayList<String> bancoPalavras= new ArrayList<>();
 	private Set<String>letrasCertas = new HashSet<>();
+	private Set<String>letrasDigitadas = new HashSet<>();
 	private Integer sorteioAtual, acertos=0, penalidade=0;
-	private String palavraCerta, dica, resultado="em andamento",palavra="";
+	private String palavraCerta, dica, resultado="a iniciar",palavra="",acertou="não";
 	private ArrayList <String> resultados = new ArrayList<>();
 	private ArrayList <String> nomePenalidade = new ArrayList<>(List.of("sem penalidades","perdeu primeira perna","perdeu segunda perna","perdeu primeiro braço", "perdeu segundo braço", "perdeu tronco", "perdeu a cabeça"));
 	
@@ -25,7 +23,8 @@ public class JogoDaForca {
 	}
 
     public JogoDaForca(){
-        	InputStream stream = this.getClass().getResourceAsStream("dados/palavras.csv");
+        	InputStream stream = this.getClass().getResourceAsStream("./dados/palavras.csv");
+			System.out.println(getClass().getResource(""));
         	if (stream == null) {
         		JOptionPane.showMessageDialog(null, "Arquivo de palavras inexistente!");
         			System.exit(0);
@@ -39,12 +38,16 @@ public class JogoDaForca {
             arquivo.close();
             }
     
-    public void iniciar() {
+    public void iniciar() throws Exception{
+    	if (this.resultado.equals("em andamento")) {
+    		throw new Exception("Encerre a partida primeiro");
+    	}
 		resultado = "em andamento";
 		palavra = "";
 		penalidade = 0;
 		acertos = 0;
 		letrasCertas.clear();
+		letrasDigitadas.clear();
     	Random aleatorio = new Random();
     	sorteioAtual = aleatorio.nextInt(0, bancoPalavras.size());
     	
@@ -59,15 +62,22 @@ public class JogoDaForca {
     }
     
     public ArrayList<Integer> getOcorrencias(String letra) throws Exception{
+    	letra = letra.toUpperCase();
 		if (letra.length() > 1 || letra.length() < 1) 
 			throw new Exception("Digite apenas uma letra válida!");
+		
+		if (letrasDigitadas.contains(letra)) {
+			throw new Exception("Você já digitou essa letra");
+		}
+		
+		letrasDigitadas.add(letra);
 
-		letra = letra.toUpperCase();
 
 		ArrayList<Integer> numeros = new ArrayList<>();
 		StringBuilder posicoesMutaveis = new StringBuilder(palavra);
 
     	if (palavraCerta.contains(letra)) {
+    		acertou = "Você acertou!";
 			letrasCertas.add(letra);
 			String[] caracteres = palavraCerta.split("");
 			
@@ -81,17 +91,18 @@ public class JogoDaForca {
     		}
     	} 
 		else{
+			acertou = "Você errou!";
 			penalidade++;
 		}
 
 		if(palavra.equals(palavraCerta)){
 			resultados.add(palavraCerta + " - Ganhou");
-			resultado="venceu";
+			resultado="Você Venceu!!!";
 		}
 
 		if(penalidade >= 6){
 			resultados.add(palavraCerta + " - Perdeu");
-			resultado = "perdeu";
+			resultado = "Você Perdeu!!!";
 		}
 
     	return numeros;
@@ -100,9 +111,21 @@ public class JogoDaForca {
 	public Integer getAcertos(){
 		return acertos;
 	}
+	
+	public String getAcertou() {
+		return acertou;
+	}
 
 	public String getResultado(){
 		return resultado;
+	}
+	
+	public String getResultados() {
+		String a = "";
+		for (int i=0; i<resultados.size(); i++) {
+			a = a + resultados.get(i) + "\n";
+		}
+		return a;
 	}
 
 	public String getDicas(){
